@@ -1,13 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
-import UserComponent from './components/User';
+//?exercice one
+// import UserComponent from './components/User';
+//?exercice two
+// import ClockFuncional from './components/exercise-two/ClockFuncional';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <UserComponent/>
+        {/* <UserComponent/> */}
+        {/* <ClockFuncional/> */}
       </header>
     </div>
   );
