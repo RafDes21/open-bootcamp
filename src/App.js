@@ -1,9 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
+//?exercice three
+import Eventos from "./components/exercice-four/Eventos";
+
 
 //?exercice three
-import HomeList from "./components/exercide-tree/HomeList";
+//import HomeList from "./components/exercide-tree/HomeList";
 
 //?exercice one
 // import UserComponent from './components/User';
@@ -16,7 +19,8 @@ function App() {
       <header className="App-header">
         {/* <UserComponent/> */}
         {/* <ClockFuncional/> */}
-        <HomeList />
+        {/* <HomeList /> */}
+        <Eventos/>
       </header>
     </div>
   );
