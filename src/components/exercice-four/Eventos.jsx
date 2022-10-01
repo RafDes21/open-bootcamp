@@ -7,22 +7,32 @@ import styled from "styled-components";
 // Por último, un método en el que cuando se pulsa dos veces en el componente, se tiene que detener el cambio de color.
 
 const Eventos = () => {
-  const [fondo, setFondo] = useState("rgb(0, 0, 0)");
+  const [fondo, setFondo] = useState('rgb(0, 0, 0)');
+
+  const [fondoFinal, setFondoFinal] = useState();
+  const [stop, setStop] = useState(true);
 
   const aleatorio = () => {
-    let random = Math.round(Math.random() * 255);
-    let random2 = Math.round(Math.random() * 255);
-    let random3 = Math.round(Math.random() * 255);
-
-    setFondo(`rgb(${random}, ${random2}, ${random3})`);
+    if (stop) {
+      let random = Math.round(Math.random() * 255);
+      let random2 = Math.round(Math.random() * 255);
+      let random3 = Math.round(Math.random() * 255);
+      let background = `rgb(${random}, ${random2}, ${random3})`;
+      setFondo(background);
+      setFondoFinal(background);
+    } else {
+      setFondoFinal(fondo);
+    }
   };
 
   const doubleClick = () => {
     alert("doble click");
+    setFondoFinal(fondo);
   };
 
   const salida = () => {
-    alert("saliod el mosue");
+    // alert("saliod el mosue");
+    setStop(false);
   };
 
   return (
@@ -33,7 +43,7 @@ const Eventos = () => {
     >
       <div
         style={{
-          backgroundColor: fondo,
+          backgroundColor: stop ? fondo : fondoFinal,
           width: "200px",
           height: "200px",
           margin: "50px auto",
