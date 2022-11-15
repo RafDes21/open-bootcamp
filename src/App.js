@@ -2,7 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 //?exercice three
-import Eventos from "./components/exercice-four/Eventos";
+//import Eventos from "./components/exercice-four/Eventos";
+
+//?excerice Formik y yup
+import { FormikComp } from "./components/formik/Formik";
 
 
 //?exercice three
@@ -20,7 +23,8 @@ function App() {
         {/* <UserComponent/> */}
         {/* <ClockFuncional/> */}
         {/* <HomeList /> */}
-        <Eventos/>
+        {/* <Eventos/> */}
+        <FormikComp/>
       </header>
     </div>
   );
